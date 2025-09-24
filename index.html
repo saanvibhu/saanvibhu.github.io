@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Your Name</title>
+    <title>Portfolio - Saanvi Bhumpalle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -85,7 +85,7 @@
 
         /* Home Section */
         .home {
-            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 25%, #fff3e0 50%, #e8f5e8 75%, #fce4ec 100%);
+            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 25%, #cbd5e0 50%, #a0aec0 75%, #718096 100%);
             position: relative;
             padding: 120px 0 80px;
             overflow: hidden;
@@ -99,9 +99,9 @@
             right: 0;
             bottom: 0;
             background-image: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 177, 153, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.2) 0%, transparent 50%);
+                radial-gradient(circle at 20% 80%, rgba(99, 179, 237, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(147, 197, 253, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(191, 219, 254, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -124,12 +124,6 @@
             border-radius: 50px;
             object-fit: cover;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            background: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 1rem;
         }
 
         .about-label {
@@ -161,13 +155,6 @@
             color: #2563eb;
             margin-bottom: 1.5rem;
             line-height: 1.1;
-        }
-
-        .home-subtitle {
-            font-size: 1.5rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
         }
 
         .home-description {
@@ -235,11 +222,13 @@
             color: #666;
             transition: all 0.3s;
             backdrop-filter: blur(10px);
+            font-size: 18px;
         }
 
         .home-social-link:hover {
             background: rgba(255,255,255,0.8);
             transform: translateY(-2px);
+            color: #2563eb;
         }
 
         /* Hero Section (Projects) */
@@ -268,14 +257,6 @@
             padding: 80px 0;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 3rem;
-            color: #1a1a1a;
-        }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -298,11 +279,17 @@
 
         .project-image {
             height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             position: relative;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .project-screenshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-image.music {
@@ -378,23 +365,51 @@
             font-weight: 500;
         }
 
+        .project-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
         .project-button {
+            flex: 1;
             background: #1a1a1a;
             color: white;
-            padding: 12px 24px;
+            padding: 12px 20px;
             border: none;
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s;
             text-decoration: none;
-            display: inline-block;
-            width: 100%;
             text-align: center;
+            font-size: 0.9rem;
         }
 
         .project-button:hover {
             background: #333;
+            transform: translateY(-1px);
+        }
+
+        .project-button.secondary {
+            background: transparent;
+            color: #1a1a1a;
+            border: 2px solid #1a1a1a;
+        }
+
+        .project-button.secondary:hover {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .project-button.disabled {
+            background: #ccc;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .project-button.disabled:hover {
+            background: #ccc;
+            transform: none;
         }
 
         /* Contact Section */
@@ -419,9 +434,6 @@
         .contact-form h3 {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .form-group {
@@ -526,6 +538,7 @@
             text-decoration: none;
             color: #666;
             transition: all 0.3s;
+            font-size: 18px;
         }
 
         .social-link:hover {
@@ -550,6 +563,26 @@
             color: #155724;
             font-size: 0.9rem;
             margin: 0;
+        }
+
+        .view-more-btn {
+            display: block;
+            margin: 3rem auto 0;
+            background: transparent;
+            border: 2px solid #1a1a1a;
+            color: #1a1a1a;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            max-width: 200px;
+        }
+
+        .view-more-btn:hover {
+            background: #1a1a1a;
+            color: white;
         }
 
         /* Responsive Design */
@@ -603,31 +636,15 @@
             .form-row {
                 grid-template-columns: 1fr;
             }
+
+            .project-buttons {
+                flex-direction: column;
+            }
         }
 
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
-        }
-
-        .view-more-btn {
-            display: block;
-            margin: 3rem auto 0;
-            background: transparent;
-            border: 2px solid #1a1a1a;
-            color: #1a1a1a;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s;
-            max-width: 200px;
-        }
-
-        .view-more-btn:hover {
-            background: #1a1a1a;
-            color: white;
         }
     </style>
 </head>
@@ -666,7 +683,7 @@
                         <a href="https://www.linkedin.com/in/saanvi-bhumpalle-4b30a4251/" class="home-social-link">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="saanvibhu13@gmail.com" class="home-social-link">
+                        <a href="mailto:saanvibhu13@gmail.com" class="home-social-link">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -687,88 +704,105 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image music">
-                        <div class="project-icon">🎵</div>
+                        <!-- Replace with: <img src="cleancareco-screenshot.png" alt="CleanCareCo" class="project-screenshot"> -->
+                        <div class="project-icon">🏥</div>
                         <div class="project-type">HackGT Hackathon Project</div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">CleanCareCo</h3>
-                        <p class="project-description">This project, Clean Care, is a web application that uses machine learning,specifically an Isolation Forest model, to detect potential healthcare fraud in CMS datasets through a user-friendly interface where users can view records, visualize fraud likelihood, or manually input data for analysis. Built with an Angular frontend and Flask backend, it streamlines fraud detection for insurance providers while showcasing teamwork in full-stack development and AI integration..</p>
+                        <p class="project-description">A web application that uses machine learning (Isolation Forest model) to detect potential healthcare fraud in CMS datasets through a user-friendly interface. Users can view records, visualize fraud likelihood, or manually input data for analysis.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Angular</span>
                             <span class="tech-tag">Machine Learning</span>
                             <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Python</span>
                         </div>
-                        <a href="#" class="project-button">🔗 Live Demo</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/yourusername/cleancareco" class="project-button secondary">View Code</a>
+                            <a href="#" class="project-button disabled">Demo Coming Soon</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image hiking">
-                        <div class="project-icon">📱</div>
+                        <!-- Replace with: <img src="spotify-viz-screenshot.png" alt="Spotify Visualization" class="project-screenshot"> -->
+                        <div class="project-icon">📊</div>
                         <div class="project-type">Data Visualization Project</div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Spotify Song Visualization</h3>
-                        <p class="project-description">This project visualizes Spotify’s most popular songs by year with an interactive bubble scatter chart, where bubble size and color encode attributes like popularity, energy, and genre. Users can filter, explore trends, and click on songs for details, making it easy to spot patterns across years, genres, and artists.</p>
+                        <p class="project-description">Interactive bubble scatter chart visualizing Spotify's most popular songs by year. Bubble size and color encode attributes like popularity, energy, and genre with filtering capabilities and detailed song information.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">MapBox</span>
-                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Data Analysis</span>
                         </div>
-                        <a href="#" class="project-button">🔗 Live Demo</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/yourusername/spotify-viz" class="project-button secondary">View Code</a>
+                            <a href="https://your-spotify-viz.github.io" class="project-button">Live Demo</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image dashboard">
+                        <!-- Replace with actual project screenshot when available -->
                         <div class="project-icon">💻</div>
                         <div class="project-type">Web Application</div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">DevFlow Dashboard</h3>
-                        <p class="project-description">A modern project management and code review dashboard designed to streamline development workflows and enhance team collaboration.</p>
+                        <h3 class="project-title">Task Management System</h3>
+                        <p class="project-description">A modern project management application with real-time collaboration features, task tracking, and team coordination tools designed to enhance productivity.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">Prisma</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
                         </div>
-                        <a href="#" class="project-button">🔗 Live Demo</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/yourusername/task-manager" class="project-button secondary">View Code</a>
+                            <a href="#" class="project-button disabled">In Development</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image portfolio">
+                        <!-- This could be a screenshot of this very portfolio -->
                         <div class="project-icon">🎨</div>
-                        <div class="project-type">Web Platform</div>
+                        <div class="project-type">Web Portfolio</div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Creative Portfolio System</h3>
-                        <p class="project-description">A dynamic portfolio builder that helps creatives showcase their work with customizable themes and interactive presentations.</p>
+                        <h3 class="project-title">Personal Portfolio Website</h3>
+                        <p class="project-description">A responsive portfolio website built with modern web technologies, featuring smooth animations, interactive elements, and optimized performance across all devices.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Nuxt.js</span>
-                            <span class="tech-tag">GSAP</span>
-                            <span class="tech-tag">Netlify CMS</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GitHub Pages</span>
                         </div>
-                        <a href="#" class="project-button">🔗 Live Demo</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/saanvibhu/saanvibhu.github.io" class="project-button secondary">View Code</a>
+                            <a href="https://saanvibhu.github.io" class="project-button">Live Site</a>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <a href="#" class="view-more-btn">🔗 View More on GitHub</a>
+            <a href="https://github.com/saanvibhu" class="view-more-btn">View More on GitHub</a>
         </div>
     </section>
 
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 3rem;">Let's Connect</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Whether you want to collaborate on a project, discuss music, share hiking stories, or just say hello, I'd love to hear from you.</p>
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 3rem; color: #1a1a1a;">Let's Connect</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Whether you want to collaborate on a project, discuss technology, or just say hello, I'd love to hear from you.</p>
             
             <div class="contact-container">
                 <div class="contact-form">
-                    <h3>💬 Send a Message</h3>
+                    <h3>Send a Message</h3>
                     <form>
                         <div class="form-row">
                             <div class="form-group">
@@ -777,7 +811,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="saanvibhu13@gmail.com" required>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -788,24 +822,28 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" placeholder="Tell me about your project, idea, or just say hello..." required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">✉️ Send Message</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
 
                 <div class="contact-info">
                     <h2>Get In Touch</h2>
-                    <p>I'm always open to discussing new opportunities, creative projects, or just having a good conversation about technology, music, or the great outdoors.</p>
+                    <p>I'm always open to discussing new opportunities, creative projects, or having conversations about technology and AI.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                             <div>
                                 <strong>Email</strong><br>
                                 saanvibhu13@gmail.com
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">💬</div>
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
                             <div>
                                 <strong>Response Time</strong><br>
                                 Usually within 24 hours
@@ -815,13 +853,25 @@
 
                     <h4>Connect on Social</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">📁</a>
-                        <a href="#" class="social-link">💼</a>
-                        <a href="#" class="social-link">🐦</a>
-                        <a href="#" class="social-link">✉️</a>
+                        <a href="https://github.com/saanvibhu" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saanvi-bhumpalle-4b30a4251/" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:saanvibhu13@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
 
-                    
+                    <div class="availability">
+                        <h4>Currently Available</h4>
+                        <p>I'm open to internships, part-time opportunities, and collaborative projects. Let's build something amazing together!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         // Smooth scrolling for navigation links
@@ -841,7 +891,7 @@
         // Form submission handler
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thanks for your message! This is a demo form. In a real implementation, you would connect this to a backend service.');
+            alert('Thanks for your message! This is a demo form. In a real implementation, you would connect this to a backend service like Formspree or Netlify Forms.');
         });
 
         // Add some interactivity to project cards
