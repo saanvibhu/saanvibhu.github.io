@@ -1,56 +1,4 @@
-.trail-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
-}
-
-.trail-meta span {
-    padding: 0.4rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.difficulty {
-    background: #f1f3f4;
-}
-
-.difficulty.easy {
-    background: #dcfce7;
-    color: #166534;
-}
-
-.difficulty.moderate {
-    background: #fef3c7;
-    color: #92400e;
-}
-
-.difficulty.hard {
-    background: #fee2e2;
-    color: #991b1b;
-}
-
-.location {
-    background: #f3f4f6;
-    color: #4b5563;
-}
-
-.trail-note {
-    color: #666;
-    font-style: italic;
-    font-size: 0.95rem;
-}
-
-/* Study Spots Section */
-.study-spots {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.spot-category {
-    background: linear-gradient(135deg,* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -659,17 +607,19 @@ textarea {
 
 .about-layout {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 250px 1fr;
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Table of Contents Sidebar */
 .toc-sidebar {
     position: sticky;
-    top: 100px;
+    top: 120px;
     height: fit-content;
+    align-self: start;
 }
 
 .toc-content {
@@ -792,7 +742,23 @@ textarea {
     font-size: 0.95rem;
 }
 
-/* Experience Section */
+/* Experience Section with Subsections */
+.experience-subsection {
+    margin-bottom: 2.5rem;
+}
+
+.experience-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    font-size: 1.4rem;
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
 .experience-item {
     margin-bottom: 2.5rem;
     padding-bottom: 2.5rem;
@@ -812,8 +778,8 @@ textarea {
     margin-bottom: 0.5rem;
 }
 
-.exp-header h3 {
-    font-size: 1.2rem;
+.exp-header h4 {
+    font-size: 1.1rem;
     color: #1a1a1a;
 }
 
@@ -846,8 +812,8 @@ textarea {
     border-bottom: none;
 }
 
-.project-item h3 {
-    font-size: 1.2rem;
+.project-item h4 {
+    font-size: 1.1rem;
     color: #1a1a1a;
     margin-bottom: 0.25rem;
 }
@@ -855,13 +821,6 @@ textarea {
 .project-item .date {
     display: inline-block;
     margin-bottom: 0.5rem;
-}
-
-.about-cta {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 3rem;
 }
 
 .about-cta {
@@ -928,10 +887,6 @@ textarea {
     font-size: 1.05rem;
 }
 
-.trail-vibe i {
-    margin-right: 0.5rem;
-}
-
 .trail-meta {
     display: flex;
     flex-wrap: wrap;
@@ -940,17 +895,10 @@ textarea {
 }
 
 .trail-meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
-}
-
-.trail-meta i {
-    font-size: 0.9rem;
 }
 
 .difficulty {
@@ -973,13 +921,8 @@ textarea {
 }
 
 .location {
-    background: #dbeafe;
-    color: #1e40af;
-}
-
-.length {
-    background: #e0e7ff;
-    color: #4338ca;
+    background: #f3f4f6;
+    color: #4b5563;
 }
 
 .trail-note {
@@ -1011,10 +954,6 @@ textarea {
     gap: 0.75rem;
 }
 
-.spot-category h3 i {
-    color: #2563eb;
-}
-
 .spot-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1036,32 +975,6 @@ textarea {
     border-left-color: #2563eb;
     transform: translateX(3px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.spot-item i {
-    color: #2563eb;
-    font-size: 1rem;
-}
-
-.spot-item.featured {
-    border-left-color: #7c3aed;
-}
-
-.spot-item.featured i {
-    color: #7c3aed;
-}
-
-.spot-item.coffee {
-    border-left-color: #d97706;
-}
-
-.spot-item.coffee i {
-    color: #d97706;
-}
-
-.spot-item span {
-    color: #333;
-    font-size: 0.95rem;
 }
 
 /* Responsive Design */
@@ -1114,6 +1027,15 @@ textarea {
 
     .project-buttons {
         flex-direction: column;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .toc-sidebar {
+        position: static;
     }
 
     .trail-card {
