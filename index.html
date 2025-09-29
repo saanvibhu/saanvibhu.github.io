@@ -28,7 +28,6 @@
             padding: 0 20px;
         }
 
-        /* Navigation */
         nav {
             background: white;
             padding: 1rem 0;
@@ -86,7 +85,6 @@
             color: #007bff;
         }
 
-        /* Home Section */
         .home {
             background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 25%, #cbd5e0 50%, #a0aec0 75%, #718096 100%);
             position: relative;
@@ -150,14 +148,6 @@
             color: #333;
             margin-bottom: 2rem;
             font-weight: 300;
-        }
-
-        .home-title {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #2563eb;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
         }
 
         .home-description {
@@ -234,7 +224,6 @@
             color: #2563eb;
         }
 
-        /* Hero Section (Projects) */
         .hero {
             background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             padding: 80px 0 60px;
@@ -295,7 +284,6 @@
             z-index: 1;
         }
 
-        /* Projects Section */
         .projects {
             padding: 80px 0;
         }
@@ -349,19 +337,6 @@
 
         .project-image.portfolio {
             background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-        }
-
-        .project-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
         }
 
         .project-type {
@@ -444,21 +419,47 @@
             color: white;
         }
 
-        .project-button.disabled {
-            background: #ccc;
-            color: #999;
-            cursor: not-allowed;
+        .view-more-btn {
+            display: block;
+            margin: 3rem auto 0;
+            background: transparent;
+            border: 2px solid #1a1a1a;
+            color: #1a1a1a;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            max-width: 200px;
         }
 
-        .project-button.disabled:hover {
-            background: #ccc;
-            transform: none;
+        .view-more-btn:hover {
+            background: #1a1a1a;
+            color: white;
         }
 
-        /* Contact Section */
         .contact {
-            background: white;
+            background: linear-gradient(180deg, #1e3a8a 0%, #3b82f6 25%, #60a5fa 50%, #93c5fd 75%, #dbeafe 100%);
             padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3E .wave %7B animation: wave 15s ease-in-out infinite; transform-origin: 50%25 50%25; %7D @keyframes wave %7B 0%25, 100%25 %7B transform: translateY(0); %7D 50%25 %7B transform: translateY(10px); %7D %7D %3C/style%3E%3C/defs%3E%3Cpath class='wave' d='M0,160 C320,100 420,200 740,150 C1060,100 1160,200 1480,160 L1480,400 L0,400 Z' fill='rgba(147,197,253,0.3)'/%3E%3Cpath class='wave' d='M0,200 C300,140 450,240 740,190 C1030,140 1180,240 1480,200 L1480,400 L0,400 Z' fill='rgba(96,165,250,0.2)' style='animation-delay: -5s'/%3E%3Cpath class='wave' d='M0,240 C280,180 480,280 740,230 C1000,180 1200,280 1480,240 L1480,400 L0,400 Z' fill='rgba(59,130,246,0.15)' style='animation-delay: -10s'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            pointer-events: none;
+            opacity: 0.6;
         }
 
         .contact-container {
@@ -466,12 +467,16 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: start;
+            position: relative;
+            z-index: 1;
         }
 
         .contact-form {
-            background: #f8f9fa;
+            background: rgba(255, 255, 255, 0.95);
             padding: 2.5rem;
             border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .contact-form h3 {
@@ -511,7 +516,7 @@
         }
 
         .submit-btn {
-            background: #007bff;
+            background: #1e40af;
             color: white;
             padding: 12px 24px;
             border: none;
@@ -524,19 +529,24 @@
         }
 
         .submit-btn:hover {
-            background: #0056b3;
+            background: #1e3a8a;
         }
 
         .contact-info h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #1a1a1a;
+            color: white;
         }
 
         .contact-info p {
-            color: #666;
+            color: rgba(255,255,255,0.9);
             margin-bottom: 2rem;
             line-height: 1.6;
+        }
+
+        .contact-info h4 {
+            color: white;
+            margin-bottom: 1rem;
         }
 
         .contact-details {
@@ -549,14 +559,15 @@
             gap: 15px;
             margin-bottom: 1rem;
             padding: 1rem;
-            background: #f8f9fa;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
 
         .contact-icon {
             width: 40px;
             height: 40px;
-            background: #007bff;
+            background: #1e40af;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -573,62 +584,23 @@
         .social-link {
             width: 50px;
             height: 50px;
-            background: #f1f3f4;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: #666;
+            color: #1e40af;
             transition: all 0.3s;
             font-size: 18px;
         }
 
         .social-link:hover {
-            background: #007bff;
-            color: white;
+            background: white;
+            color: #1e3a8a;
             transform: translateY(-2px);
         }
 
-        .availability {
-            background: #e8f5e8;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid #28a745;
-        }
-
-        .availability h4 {
-            color: #155724;
-            margin-bottom: 0.5rem;
-        }
-
-        .availability p {
-            color: #155724;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        .view-more-btn {
-            display: block;
-            margin: 3rem auto 0;
-            background: transparent;
-            border: 2px solid #1a1a1a;
-            color: #1a1a1a;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s;
-            max-width: 200px;
-        }
-
-        .view-more-btn:hover {
-            background: #1a1a1a;
-            color: white;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -638,10 +610,6 @@
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 2rem;
-            }
-
-            .home-title {
-                font-size: 2.5rem;
             }
 
             .intro-text {
@@ -685,7 +653,6 @@
             }
         }
 
-        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -712,7 +679,7 @@
             <div class="home-content">
                 <div class="home-image">
                     <img src="main_photo.jpeg" alt="Saanvi" class="profile-photo">
-                    <div class="about-label">about</div>
+                    <div class="about-label">hello!</div>
                 </div>
                 <div class="home-text">
                     <div class="intro-text">Hey, I'm Saanvi.</div>
@@ -791,7 +758,7 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Writing Chatbot</h3>
-                        <p class="project-description">A modern project management application with real-time collaboration features, task tracking, and team coordination tools designed to enhance productivity.</p>
+                        <p class="project-description">Built an assistant using LangChain, Pinecone, and OpenAI embeddings that enables semantic search and context-aware question answering over custom documents through a retrieval-augmented generation (RAG) pipeline.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Embeddings</span>
                             <span class="tech-tag">LangChain</span>
@@ -806,9 +773,7 @@
 
                 <div class="project-card">
                     <div class="project-image portfolio">
-                        
                         <img src="studentgradeML.png" alt="Student Grade Prediction Model" class="project-screenshot">
-                        
                         <div class="project-type">ML Project</div>
                     </div>
                     <div class="project-content">
@@ -833,8 +798,8 @@
 
     <section class="contact" id="contact">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 3rem; color: #1a1a1a;">Let's Connect</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Whether you want to collaborate on a project, discuss technology, or just say hello, I'd love to hear from you.</p>
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 3rem; color: white; position: relative; z-index: 1;">Let's Connect</h2>
+            <p style="text-align: center; color: rgba(255,255,255,0.95); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; position: relative; z-index: 1;">I'd love to hear from you.</p>
             
             <div class="contact-container">
                 <div class="contact-form">
@@ -847,7 +812,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="saanvibhu13@gmail.com" required>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -878,36 +843,4 @@
                             <div class="contact-icon">
                                 <i class="fas fa-clock"></i>
                             </div>
-                            <div>
-                                <strong>Response Time</strong><br>
-                                Usually within 24 hours
-                            </div>
-                        </div>
-                    </div>
-
-                    <h4>Connect on Social</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/saanvibhu" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/saanvi-bhumpalle-4b30a4251/" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:saanvibhu13@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-
-                    <div class="availability">
-                        <h4>Currently Available</h4>
-                        <p>I'm open to internships, part-time opportunities, and collaborative projects. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+                            <div
