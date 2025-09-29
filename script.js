@@ -1,3 +1,15 @@
+// EmailJS Configuration
+const EMAILJS_CONFIG = {
+    PUBLIC_KEY: 'sdOnzPzGvVN-NEplm',
+    SERVICE_ID: 'service_51232qo',
+    TEMPLATE_ID: 'template_47hc238'
+};
+
+// Initialize EmailJS
+(function() {
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+})();
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -12,28 +24,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler
+// Form submission handler with EmailJS
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form values
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
+        const submitBtn = this.querySelector('.submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        const formMessage = document.getElementById('form-message');
         
-        // Here you would typically send the data to a server
-        // For now, we'll just log it and show an alert
-        console.log('Form submitted:', formData);
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline-block';
+        formMessage.style.display = 'none';
         
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        
-        // Reset form
-        contactForm.reset();
+        // Send email using EmailJS
+        emailjs.sendForm(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            this
+        )
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            
+            // Show success message
+            formMessage.textContent = '✓ Thank you! Your message has been sent successfully. I\'ll get back to you soon!';
+            formMessage.style.display = 'block';
+            formMessage.style.background = '#dcfce7';
+            formMessage.style.color = '#166534';
+            formMessage.style.border = '1px solid #86efac';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+            
+        }, function(error) {
+            console.log('FAILED...', error);
+            
+            // Show error message
+            formMessage.textContent = '✗ Oops! Something went wrong. Please try again or email me directly at saanvibhu13@gmail.com';
+            formMessage.style.display = 'block';
+            formMessage.style.background = '#fee2e2';
+            formMessage.style.color = '#991b1b';
+            formMessage.style.border = '1px solid #fca5a5';
+        })
+        .finally(function() {
+            // Reset button state
+            submitBtn.disabled = false;
+            btnText.style.display = 'inline-block';
+            btnLoading.style.display = 'none';
+        });
     });
 }
 
