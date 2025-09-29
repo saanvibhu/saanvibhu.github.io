@@ -28,187 +28,250 @@
 
     <section class="about-page">
         <div class="container">
-            <div class="about-header">
-                <h1>About Me</h1>
-                <p class="about-subtitle">Get to know me better</p>
-            </div>
+            <div class="about-layout">
+                <!-- Table of Contents Sidebar -->
+                <nav class="toc-sidebar">
+                    <div class="toc-content">
+                        <h3>Contents</h3>
+                        <ul class="toc-list">
+                            <li><a href="#background">Background</a></li>
+                            <li><a href="#journey">My Journey</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#hiking">Hiking Trails</a></li>
+                            <li><a href="#study-spots">Study Spots</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
-            <div class="about-content">
-                <div class="about-section">
-                    <h2>Background</h2>
-                    <p>Write about your background, education, and what led you to computer science...</p>
-                </div>
+                <!-- Main Content -->
+                <div class="about-main">
+                    <div class="about-header">
+                        <h1>About Me</h1>
+                        <p class="about-subtitle">Computer Science student at Georgia Tech specializing in AI and human-centered design</p>
+                    </div>
 
-                <div class="about-section">
-                    <h2><i class="fas fa-mountain"></i> Top 5 Hiking Trails</h2>
-                    <p class="section-intro">My favorite trails that are absolutely worth the journey</p>
-                    
-                    <div class="hiking-list">
-                        <div class="trail-card rank-1">
-                            <div class="trail-rank">1</div>
-                            <div class="trail-content">
-                                <h3>Parker's Ridge Trail</h3>
-                                <div class="trail-vibe">
-                                    <i class="fas fa-heart"></i> Glacier views at the top with wildflowers along the way
+                    <div class="about-content">
+                        <div class="about-section" id="background">
+                            <h2>Background</h2>
+                            <p>I'm a graduate student at Georgia Institute of Technology pursuing my Master's in Computer Science with a specialization in Artificial Intelligence. My journey in tech is driven by a curiosity about how AI, algorithms, and people intersect to create meaningful solutions.</p>
+                            <p>Currently based in Atlanta, GA, I'm open to opportunities in San Francisco, Seattle, New York, and other tech hubs. I'm passionate about building intelligent solutions that are rooted in both technical rigor and human-centered design principles.</p>
+                        </div>
+
+                        <div class="about-section" id="journey">
+                            <h2>My Journey Into CS</h2>
+                            <p>My path into computer science began unexpectedly as a kid building HTML websites, then completely forgetting about coding until I took Introduction to Digital Technology. That class reignited something in me—I started enjoying the backend of code throughout high school, working with JavaScript and eventually solving problems with Python.</p>
+                            
+                            <p>I'm graduating this fall with what I believe is a truly diverse background. I've intentionally worked across a wide range of disciplines—from product design and user research to back-end development and site reliability engineering. This isn't a lack of focus; it's a deliberate strategy to gain a comprehensive, 360-degree understanding of the entire software development lifecycle, from initial concept all the way to a deployed and performant application.</p>
+                            
+                            <p>For example, I started by learning about user research and how analysis can lead to identifying which features help users. Then I moved into the design of those features—specifically front-end design—and eventually into implementation, where I discovered how efficiency matters when thinking about application performance management.</p>
+                            
+                            <p>My internships, particularly at Raymond James, have been incredibly influential. There, I gained firsthand experience with real-world problems like threading issues and the critical importance of code efficiency. That experience solidified my belief that the best code isn't just functional—it's also robust and reliable.</p>
+                            
+                            <p>Academically, my concentration in both artificial intelligence and people has given me a unique perspective. My research on how human decision-making can be replicated by computers has taught me to think about the deeper, often unquantifiable nuances behind complex problems. I believe this ability to connect the technical with the human element is what allows me to consistently think outside the box and bring new, innovative ideas to the table.</p>
+                            
+                            <p>Ultimately, I'm passionate about what I do, and I'm always eager to learn, adapt, and bring a holistic perspective to any project I work on.</p>
+                        </div>
+
+                        <div class="about-section" id="education">
+                            <h2>Education</h2>
+                            <div class="education-item">
+                                <h3>Georgia Institute of Technology</h3>
+                                <div class="degree-info">
+                                    <strong>Master of Science, Computer Science</strong>
+                                    <span class="date">Expected Dec 2026</span>
                                 </div>
-                                <div class="trail-meta">
-                                    <span class="difficulty hard"><i class="fas fa-hiking"></i> Hard</span>
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Banff, Canada</span>
-                                    <span class="length"><i class="fas fa-route"></i> 4.3 miles</span>
+                                <p>Specialization in Artificial Intelligence</p>
+                                <p><em>Relevant Coursework:</em> Computer Vision</p>
+                            </div>
+                            <div class="education-item">
+                                <div class="degree-info">
+                                    <strong>Bachelor of Science, Computer Science</strong>
+                                    <span class="date">Expected Dec 2025</span>
                                 </div>
-                                <p class="trail-note">A few slips along the way were worth it!</p>
+                                <p>Concentrations: Intelligence and People</p>
+                                <p>Faculty Honors (2x), Dean's List (3x), National Merit Special Scholar, Business Analytics Certificate</p>
+                                <p><em>Relevant Coursework:</em> Design and Analysis of Algorithms, Computer Organization, Artificial Intelligence, Data Structures and Algorithms, Business Analytics, Objects and Design, Natural Language Processing, Applied Combinatorics</p>
                             </div>
                         </div>
 
-                        <div class="trail-card rank-2">
-                            <div class="trail-rank">2</div>
-                            <div class="trail-content">
-                                <h3>Emerald Pools Trail</h3>
-                                <div class="trail-vibe">
-                                    <i class="fas fa-heart"></i> Walking behind the lower waterfall was magical
+                        <div class="about-section" id="experience">
+                            <h2>Experience</h2>
+                            
+                            <div class="experience-item">
+                                <div class="exp-header">
+                                    <h3>Software Development Engineer Intern</h3>
+                                    <span class="date">May 2025 – Aug 2025</span>
                                 </div>
-                                <div class="trail-meta">
-                                    <span class="difficulty moderate"><i class="fas fa-hiking"></i> Moderate</span>
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Zion National Park</span>
-                                    <span class="length"><i class="fas fa-route"></i> 3 miles</span>
+                                <p class="company">Infor | Alpharetta, GA</p>
+                                <ul>
+                                    <li>Built a multimodal AI assistant delivering real-time semantic search and retrieval by combining image and search agents with EfficientNet-B0, Weaviate, Tavily, MCP, and PostgreSQL</li>
+                                    <li>Cut query costs by ~90% through dynamic vector search, selective context inclusion, RAG-based caching, and optimized token management</li>
+                                    <li>Improved image retrieval accuracy with top-k similarity matches using EfficientNet-B0 vectorization and Weaviate cosine similarity search</li>
+                                </ul>
+                            </div>
+
+                            <div class="experience-item">
+                                <div class="exp-header">
+                                    <h3>Software Engineering Intern</h3>
+                                    <span class="date">May 2024 – Aug 2024</span>
                                 </div>
-                                <p class="trail-note">Perfect difficulty for maintaining momentum throughout</p>
+                                <p class="company">Raymond James | St. Petersburg, FL</p>
+                                <ul>
+                                    <li>Monitored application performance leveraging Splunk, Dynatrace, and custom financial API configurations to ensure SLAs and SLOs for SRE team</li>
+                                    <li>Reduced query runtime from 48 hours to 1 hour by optimizing Splunk search queries with JSON input parsing through a Python backend</li>
+                                </ul>
+                            </div>
+
+                            <div class="experience-item">
+                                <div class="exp-header">
+                                    <h3>Software Consulting Intern</h3>
+                                    <span class="date">June 2021 – July 2021</span>
+                                </div>
+                                <p class="company">Silverlabs Technologies | San Jose, CA</p>
+                                <ul>
+                                    <li>Improved content production reach by 30% by optimizing Agile workflows and applying data-driven process improvements</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="trail-card rank-3">
-                            <div class="trail-rank">3</div>
-                            <div class="trail-content">
-                                <h3>West Rim to Scout Lookout</h3>
-                                <div class="trail-vibe">
-                                    <i class="fas fa-heart"></i> Incredible views and heights at sunrise
-                                </div>
-                                <div class="trail-meta">
-                                    <span class="difficulty hard"><i class="fas fa-hiking"></i> Hard</span>
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Zion National Park</span>
-                                    <span class="length"><i class="fas fa-route"></i> 4 miles</span>
-                                </div>
-                                <p class="trail-note">Sunrise hike was a major serotonin boost</p>
+                        <div class="about-section" id="projects">
+                            <h2>Projects & Extracurriculars</h2>
+                            
+                            <div class="project-item">
+                                <h3>Georgia Tech VIP Program</h3>
+                                <span class="date">Jan 2024 - May 2025</span>
+                                <ul>
+                                    <li>Developed cross-platform mobile app with React Native and Expo, extending using AWS Amplify</li>
+                                    <li>Deployed an app for speech therapy patients with audio/video recording and playback in React Native and TypeScript</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-item">
+                                <h3>Bits of Good, Hack 4 Impact - Operations Coordinator</h3>
+                                <span class="date">Aug 2023 – Present</span>
+                                <ul>
+                                    <li>Managed club events and initiatives for Demo Day and Launch Party</li>
+                                    <li>Designed a personalized skincare app with ingredient analysis, user recommendations, and trend insights</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="trail-card rank-4">
-                            <div class="trail-rank">4</div>
-                            <div class="trail-content">
-                                <h3>Johnston Canyon Lower Falls</h3>
-                                <div class="trail-vibe">
-                                    <i class="fas fa-heart"></i> That signature Banff water color up close
+                        <div class="about-section" id="hiking">
+                            <h2>Top 5 Hiking Trails</h2>
+                            <p class="section-intro">My favorite trails that are absolutely worth the journey</p>
+                            
+                            <div class="hiking-list">
+                                <div class="trail-card">
+                                    <div class="trail-rank">1</div>
+                                    <div class="trail-content">
+                                        <h3>Parker's Ridge Trail</h3>
+                                        <div class="trail-vibe">Glacier views at the top with wildflowers along the way</div>
+                                        <div class="trail-meta">
+                                            <span class="difficulty hard">Hard</span>
+                                            <span class="location">Banff, Canada • 4.3 miles</span>
+                                        </div>
+                                        <p class="trail-note">A few slips along the way were worth it!</p>
+                                    </div>
                                 </div>
-                                <div class="trail-meta">
-                                    <span class="difficulty easy"><i class="fas fa-hiking"></i> Easy</span>
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Banff, Canada</span>
-                                    <span class="length"><i class="fas fa-route"></i> 1.6 miles</span>
+
+                                <div class="trail-card">
+                                    <div class="trail-rank">2</div>
+                                    <div class="trail-content">
+                                        <h3>Emerald Pools Trail</h3>
+                                        <div class="trail-vibe">Walking behind the lower waterfall was magical</div>
+                                        <div class="trail-meta">
+                                            <span class="difficulty moderate">Moderate</span>
+                                            <span class="location">Zion National Park • 3 miles</span>
+                                        </div>
+                                        <p class="trail-note">Perfect difficulty for maintaining momentum throughout</p>
+                                    </div>
                                 </div>
-                                <p class="trail-note">Very accessible and perfect for all levels</p>
+
+                                <div class="trail-card">
+                                    <div class="trail-rank">3</div>
+                                    <div class="trail-content">
+                                        <h3>West Rim to Scout Lookout</h3>
+                                        <div class="trail-vibe">Incredible views and heights at sunrise</div>
+                                        <div class="trail-meta">
+                                            <span class="difficulty hard">Hard</span>
+                                            <span class="location">Zion National Park • 4 miles</span>
+                                        </div>
+                                        <p class="trail-note">Sunrise hike was a major serotonin boost</p>
+                                    </div>
+                                </div>
+
+                                <div class="trail-card">
+                                    <div class="trail-rank">4</div>
+                                    <div class="trail-content">
+                                        <h3>Johnston Canyon Lower Falls</h3>
+                                        <div class="trail-vibe">That signature Banff water color up close</div>
+                                        <div class="trail-meta">
+                                            <span class="difficulty easy">Easy</span>
+                                            <span class="location">Banff, Canada • 1.6 miles</span>
+                                        </div>
+                                        <p class="trail-note">Very accessible and perfect for all levels</p>
+                                    </div>
+                                </div>
+
+                                <div class="trail-card">
+                                    <div class="trail-rank">5</div>
+                                    <div class="trail-content">
+                                        <h3>Watchman Trail</h3>
+                                        <div class="trail-vibe">Comfortable difficulty with wildlife sightings</div>
+                                        <div class="trail-meta">
+                                            <span class="difficulty moderate">Moderate</span>
+                                            <span class="location">Zion National Park • 3.3 miles</span>
+                                        </div>
+                                        <p class="trail-note">Saw a deer on this hike!</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="trail-card rank-5">
-                            <div class="trail-rank">5</div>
-                            <div class="trail-content">
-                                <h3>Watchman Trail</h3>
-                                <div class="trail-vibe">
-                                    <i class="fas fa-heart"></i> Comfortable difficulty with wildlife sightings
+                        <div class="about-section" id="study-spots">
+                            <h2>Favorite Study Spots at Georgia Tech</h2>
+                            <p class="section-intro">My go-to places for getting work done on campus</p>
+                            
+                            <div class="study-spots">
+                                <div class="spot-category">
+                                    <h3>Best for Focus (Silent)</h3>
+                                    <div class="spot-list">
+                                        <div class="spot-item">Price Gilbert Library (PG) 4th Floor Cubicles</div>
+                                        <div class="spot-item">Price Gilbert Library (PG) 1st Floor Tables</div>
+                                        <div class="spot-item">Clough Undergraduate Learning Commons (CULC) 4th Floor Tables</div>
+                                        <div class="spot-item">Scheller College 3rd Floor</div>
+                                        <div class="spot-item">Klaus Advanced Computing Building 3rd Floor</div>
+                                        <div class="spot-item">MRDC Building</div>
+                                        <div class="spot-item">Crossland Tower 6th & 7th Floors</div>
+                                    </div>
                                 </div>
-                                <div class="trail-meta">
-                                    <span class="difficulty moderate"><i class="fas fa-hiking"></i> Moderate</span>
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Zion National Park</span>
-                                    <span class="length"><i class="fas fa-route"></i> 3.3 miles</span>
+
+                                <div class="spot-category">
+                                    <h3>Best for Coding Projects</h3>
+                                    <div class="spot-list">
+                                        <div class="spot-item">Price Gilbert Library (PG) 3rd Floor</div>
+                                        <div class="spot-item">Clough Undergraduate Learning Commons (CULC) 3rd Floor</div>
+                                    </div>
                                 </div>
-                                <p class="trail-note">Saw a deer on this hike!</p>
+
+                                <div class="spot-category">
+                                    <h3>Best for Coffee & Quick Tasks</h3>
+                                    <div class="spot-list">
+                                        <div class="spot-item">Barnes & Noble Starbucks</div>
+                                        <div class="spot-item">Gold & Bold Coffee Shop</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="about-section">
-                    <h2><i class="fas fa-book"></i> Favorite Study Spots at Georgia Tech</h2>
-                    <p class="section-intro">My go-to places for getting work done on campus</p>
-                    
-                    <div class="study-spots">
-                        <div class="spot-category">
-                            <h3><i class="fas fa-volume-mute"></i> Best for Focus (Silent)</h3>
-                            <div class="spot-list">
-                                <div class="spot-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>Price Gilbert Library (PG) 4th Floor Cubicles</span>
-                                </div>
-                                <div class="spot-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>Price Gilbert Library (PG) 1st Floor Tables</span>
-                                </div>
-                                <div class="spot-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>Clough Undergraduate Learning Commons (CULC) 4th Floor Tables</span>
-                                </div>
-                                <div class="spot-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>Scheller College 3rd Floor</span>
-                                </div>
-                                <div class="spot-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>Klaus Advanced Computing Building 3rd Floor</span>
-                                </div>
-                                <div class="spot-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>MRDC Building</span>
-                                </div>
-                                <div class="spot-item">
-                                    <i class="fas fa-cube"></i>
-                                    <span>Crossland Tower 6th & 7th Floors</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="spot-category">
-                            <h3><i class="fas fa-laptop-code"></i> Best for Coding Projects</h3>
-                            <div class="spot-list">
-                                <div class="spot-item featured">
-                                    <i class="fas fa-code"></i>
-                                    <span>Price Gilbert Library (PG) 3rd Floor</span>
-                                </div>
-                                <div class="spot-item featured">
-                                    <i class="fas fa-code"></i>
-                                    <span>Clough Undergraduate Learning Commons (CULC) 3rd Floor</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="spot-category">
-                            <h3><i class="fas fa-coffee"></i> Best for Coffee & Quick Tasks</h3>
-                            <div class="spot-list">
-                                <div class="spot-item coffee">
-                                    <i class="fas fa-mug-hot"></i>
-                                    <span>Barnes & Noble Starbucks</span>
-                                </div>
-                                <div class="spot-item coffee">
-                                    <i class="fas fa-mug-hot"></i>
-                                    <span>Gold & Bold Coffee Shop</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="about-cta">
+                        <a href="index.html#contact" class="btn-primary">Get In Touch</a>
+                        <a href="index.html#projects" class="btn-secondary">View My Projects</a>
                     </div>
                 </div>
-
-                <div class="about-section">
-                    <h2>Education</h2>
-                    <p>Add your educational background here...</p>
-                </div>
-
-                <div class="about-section">
-                    <h2>Experience</h2>
-                    <p>Share your relevant experiences, internships, or projects...</p>
-                </div>
-            </div>
-
-            <div class="about-cta">
-                <a href="index.html#contact" class="btn-primary">Get In Touch</a>
-                <a href="index.html#projects" class="btn-secondary">View My Projects</a>
             </div>
         </div>
     </section>
