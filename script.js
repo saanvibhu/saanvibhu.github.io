@@ -1,14 +1,15 @@
 // EmailJS Configuration
 const EMAILJS_CONFIG = {
-    PUBLIC_KEY: 'sdOnzPzGvVN-NEplm',
-    SERVICE_ID: 'service_51232qo',
-    TEMPLATE_ID: 'template_47hc238'
-};
-
-// Initialize EmailJS
-(function() {
+    PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+  };
+  
+  // Initialize EmailJS
+  (function() {
     emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-})();
+  })();
+  
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
